@@ -168,7 +168,7 @@ int main(){
     fileopen2(filename2, emp);
     dept.pop_back();
     emp.pop_back();
-    
+
     sort(dept.begin(), dept.end(), compare1);
     sort(emp.begin(), emp.end(), compare2);
 
@@ -176,9 +176,8 @@ int main(){
 
     ofstream testfile;
     testfile.open("join.csv", ios::out);
-    testfile << "id" << ',' << "ename" << ',' << "age" << ',' << "salary" << ',' << "did" << ',' << "dname" << ',' << "budget" << '\n';;
     for(int i = 0; i<result.size(); i++){
-        testfile << result[i]->id << ',' << result[i]->ename << ',' << result[i]->age << ',' << result[i]->salary << ',' << result[i]->did << ',' << result[i]->dname <<',' << result[i]->budget <<',' << endl ;
+        testfile << result[i]->did << ',' << result[i]->dname << ',' << result[i]->budget << ',' << result[i]->id << ',' << result[i]->id << ',' << result[i]->ename <<',' << result[i]->age <<',' << result[i]->salary <<',' << endl ;
     }
     testfile.close();
     return 0;
