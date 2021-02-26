@@ -120,7 +120,7 @@ void fileopen1(string filename1, vector<Dept*>& dept){
     string word, temp;
     Dept* dt = new Dept;
 
-    fin.open(filename1,ios::in);
+    fin.open(filename1.c_str(),ios::in);
     while (fin){
         getline(fin, temp);
         row.clear();
@@ -141,7 +141,7 @@ void fileopen2(string filename2, vector<Emp*>& emp){
     string line, word, temp;
     Emp* ep = new Emp;
     
-    fin.open(filename2,ios::in);
+    fin.open(filename2.c_str(),ios::in);
     while (fin){
         getline(fin, temp);
         row.clear();
